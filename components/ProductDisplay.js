@@ -31,6 +31,8 @@ app.component('product-display', {
 
       </div>
     </div>
+    <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+    <review-form @review-submitted="addReview"></review-form>
   </div>`,
   data() {
     return {
@@ -41,7 +43,8 @@ app.component('product-display', {
         variants: [
             { id: 2234, color: 'blue', image: './assets/images/primera_equipacio.jpg', quantity: 50 },
             { id: 2235, color: 'yellow', image: './assets/images/segona_equipacio.jpg', quantity: 0 },
-         ]
+        ],
+        reviews: []
     }
 },
 methods: {
@@ -51,6 +54,9 @@ methods: {
     updateVariant(index) {
         this.selectedVariant = index
         console.log(index)
+    },
+    addReview(review) {
+        this.reviews.push(review)
     }
 },
 computed: {
