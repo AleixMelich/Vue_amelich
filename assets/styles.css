@@ -40,6 +40,10 @@ body {
   border-radius: 50%;
 }
 
+.disabledButton {
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}
 
 .disabledButton {
   background-color: #d8d8d8;
