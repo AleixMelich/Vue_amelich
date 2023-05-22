@@ -1,10 +1,8 @@
 const app = Vue.createApp({
     data() {
         return {
-            product: 'Socks',
-            // Solution
-            description: 'A warm fuzzy pair of socks.' 
-            // Solution
+            product: 'Primera Equipacio FCB 22/23',
+            image: './assets/images/primera_equipacio.jpg'
         }
     }
 })
